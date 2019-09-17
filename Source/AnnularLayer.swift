@@ -68,6 +68,10 @@ class AnnularLayer: CAShapeLayer {
                     flagImage = UIImage(named: AnnularLayer.flagImageName, in: bundle, compatibleWith: nil)
                 }
             }
+            if flagImage == nil {
+                let bundle = Bundle(for: AnnularLayer.self)
+                flagImage = UIImage(named: AnnularLayer.flagImageName, in: bundle, compatibleWith: nil)
+            }
             AnnularLayer.flagCGImage = flagImage?.cgImage
         }
 
